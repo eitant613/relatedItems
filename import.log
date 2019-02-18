@@ -1,0 +1,447 @@
+INFO:root:Starting init
+ERROR:root:ERROR: Failed to connect to Neo4j bolt://bo0001.qos.pc.dc04.hosted.exlibrisgroup.com:7687 /qos
+ERROR:root:Related Items Import Failed
+Traceback (most recent call last):
+  File "J:/python/relatedItems/relatedItems_import.py", line 103, in <module>
+    test = importToDb(uri, "", password)
+  File "J:/python/relatedItems/relatedItems_import.py", line 34, in __init__
+    raise e
+  File "J:/python/relatedItems/relatedItems_import.py", line 30, in __init__
+    self._driver = GraphDatabase.driver(uri, auth=(user, password))
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neo4j\__init__.py", line 108, in driver
+    return Driver(uri, **config)
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neo4j\__init__.py", line 147, in __new__
+    return subclass(uri, **config)
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neo4j\__init__.py", line 221, in __new__
+    pool.release(pool.acquire())
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 698, in acquire
+    return self.acquire_direct(self.address)
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 591, in acquire_direct
+    connection = self.connector(address, error_handler=self.connection_error_handler)
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neo4j\__init__.py", line 218, in connector
+    return connect(address, **dict(config, **kwargs))
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 949, in connect
+    raise last_error
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 941, in connect
+    connection = _handshake(s, resolved_address, der_encoded_server_certificate, **config)
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 904, in _handshake
+    connection.init()
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 240, in init
+    self.sync()
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 510, in sync
+    detail_delta, summary_delta = self.fetch()
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 414, in fetch
+    return self._fetch()
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 454, in _fetch
+    response.on_failure(summary_metadata or {})
+  File "C:\Users\eitant\AppData\Local\Programs\Python\Python37-32\lib\site-packages\neobolt\direct.py", line 757, in on_failure
+    raise AuthError(message)
+neobolt.exceptions.AuthError: The client is unauthorized due to authentication failure.
+INFO:root:Starting init
+ERROR:root:ERROR: Missing or invalid CQL file
+ERROR:root:Related Items Import Failed
+Traceback (most recent call last):
+  File "J:/python/relatedItems/relatedItems_import.py", line 105, in <module>
+    test.processBooks(test, "importBooks.cql", "importSBNBooks.cql", booksPath, "Books", "related_items_harvest_Book_")
+  File "J:/python/relatedItems/relatedItems_import.py", line 68, in processBooks
+    raise e
+  File "J:/python/relatedItems/relatedItems_import.py", line 61, in processBooks
+    file = open(importISBNCql, 'r')
+FileNotFoundError: [Errno 2] No such file or directory: 'importSBNBooks.cql'
+INFO:root:Starting init
+INFO:root:Started to process Books
+ERROR:root:Related Items Import Failed
+Traceback (most recent call last):
+  File "J:/python/relatedItems/relatedItems_import.py", line 108, in <module>
+    test.processBooks(test, "importBooks.cql", "importISBNBooks.cql", booksPath, "Books", "related_items_harvest_Book_")
+  File "J:/python/relatedItems/relatedItems_import.py", line 79, in processBooks
+    print("Processing File   "+i, end='')
+TypeError: can only concatenate str (not "int") to str
+INFO:root:Starting init
+INFO:root:Started to process Books
+ERROR:root:Related Items Import Failed
+Traceback (most recent call last):
+  File "J:/python/relatedItems/relatedItems_import.py", line 108, in <module>
+    test.processBooks(test, "importBooks.cql", "importISBNBooks.cql", booksPath, "Books", "related_items_harvest_Book_")
+  File "J:/python/relatedItems/relatedItems_import.py", line 79, in processBooks
+    print("Processing File   "+i, end='')
+TypeError: can only concatenate str (not "int") to str
+INFO:root:Starting init
+INFO:root:Started to process Books
+INFO:root:Time elapsed to process related_items_harvest_Book_0.json Books import:1904 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_1.json Books import:2321 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_2.json Books import:1704 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_3.json Books import:1941 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_4.json Books import:1736 ms
+INFO:root:Started to process Book Reviews
+INFO:root:Time elapsed to process related_items_harvest_BookReview_0.json Book Reviews import:1334 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_1.json Book Reviews import:1256 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_2.json Book Reviews import:1218 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_3.json Book Reviews import:1303 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_4.json Book Reviews import:1542 ms
+INFO:root:Started to process Book Chapters
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_0.json Book Chapters import:1863 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_1.json Book Chapters import:1804 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_2.json Book Chapters import:1890 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_3.json Book Chapters import:1742 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_4.json Book Chapters import:2220 ms
+INFO:root:Total Elapsed Time for Book Import:9605 ms
+INFO:root:Total Elapsed Time for Chapter Import:9519 ms
+INFO:root:Total Elapsed Time for Review Import:6652 ms
+INFO:root:Starting init
+INFO:root:Started to process Books
+INFO:root:Time elapsed to process related_items_harvest_Book_0.json Books import:1703 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_1.json Books import:1502 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_2.json Books import:1651 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_3.json Books import:2003 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_4.json Books import:1906 ms
+INFO:root:Started to process Book Reviews
+INFO:root:Time elapsed to process related_items_harvest_BookReview_0.json Book Reviews import:1286 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_1.json Book Reviews import:1233 ms
+INFO:root:Starting init
+INFO:root:Started to process Books
+INFO:root:Time elapsed to process related_items_harvest_Book_0.json Books import:2050 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_1.json Books import:1530 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_2.json Books import:1719 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_3.json Books import:2008 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_4.json Books import:1688 ms
+INFO:root:Started to process Book Reviews
+INFO:root:Time elapsed to process related_items_harvest_BookReview_0.json Book Reviews import:1303 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_1.json Book Reviews import:1419 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_2.json Book Reviews import:1255 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_3.json Book Reviews import:1287 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_4.json Book Reviews import:1334 ms
+ERROR:root:Related Items Import Failed
+Traceback (most recent call last):
+  File "J:/python/relatedItems/relatedItems_import.py", line 117, in <module>
+    print("Total Elapsed Time for Chapter Import:" + str(round((endChapter - startChapter) * 1000)) + " ms")
+NameError: name 'endChapter' is not defined
+INFO:root:Starting init
+INFO:root:Started to process Books
+INFO:root:Time elapsed to process related_items_harvest_Book_0.json Books import:1867 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_1.json Books import:1610 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_2.json Books import:1697 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_3.json Books import:2058 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_4.json Books import:1673 ms
+INFO:root:Started to process Book Chapters
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_0.json Book Chapters import:2051 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_1.json Book Chapters import:1973 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_2.json Book Chapters import:1919 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_3.json Book Chapters import:1919 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_4.json Book Chapters import:1958 ms
+INFO:root:Started to process Book Reviews
+INFO:root:Time elapsed to process related_items_harvest_BookReview_0.json Book Reviews import:1265 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_1.json Book Reviews import:1373 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_2.json Book Reviews import:1187 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_3.json Book Reviews import:1303 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_4.json Book Reviews import:1272 ms
+INFO:root:Total Elapsed Time for Book Import:8904 ms
+INFO:root:Total Elapsed Time for Chapter Import:9821 ms
+INFO:root:Total Elapsed Time for Review Import:6399 ms
+INFO:root:Starting init
+INFO:root:Started to process Books
+INFO:root:Time elapsed to process related_items_harvest_Book_0.json Books import:4282 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_1.json Books import:3547 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_2.json Books import:4293 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_3.json Books import:5870 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_4.json Books import:4354 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_5.json Books import:4688 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_6.json Books import:3947 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_7.json Books import:4493 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_8.json Books import:4804 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_9.json Books import:4577 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_10.json Books import:4563 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_11.json Books import:4741 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_12.json Books import:4859 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_13.json Books import:4376 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_14.json Books import:4837 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_15.json Books import:4511 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_16.json Books import:4121 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_17.json Books import:4739 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_18.json Books import:4383 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_19.json Books import:4325 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_20.json Books import:4359 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_21.json Books import:4642 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_22.json Books import:3776 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_23.json Books import:4121 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_24.json Books import:4159 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_25.json Books import:3682 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_26.json Books import:4172 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_27.json Books import:4362 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_28.json Books import:4143 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_29.json Books import:4358 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_30.json Books import:4726 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_31.json Books import:4756 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_32.json Books import:4473 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_33.json Books import:4468 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_34.json Books import:4852 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_35.json Books import:4819 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_36.json Books import:4534 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_37.json Books import:4662 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_38.json Books import:4363 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_39.json Books import:4648 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_40.json Books import:3404 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_41.json Books import:3153 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_42.json Books import:3774 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_43.json Books import:4024 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_44.json Books import:4008 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_45.json Books import:4021 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_46.json Books import:4092 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_47.json Books import:5080 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_48.json Books import:5015 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_49.json Books import:4934 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_50.json Books import:4815 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_51.json Books import:4972 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_52.json Books import:5064 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_53.json Books import:5044 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_54.json Books import:4979 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_55.json Books import:4649 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_56.json Books import:4893 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_57.json Books import:4610 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_58.json Books import:4833 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_59.json Books import:4777 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_60.json Books import:5000 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_61.json Books import:5102 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_62.json Books import:5308 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_63.json Books import:4475 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_64.json Books import:5124 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_65.json Books import:5095 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_66.json Books import:5571 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_67.json Books import:4795 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_68.json Books import:4928 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_69.json Books import:5380 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_70.json Books import:5133 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_71.json Books import:5042 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_72.json Books import:4931 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_73.json Books import:4018 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_74.json Books import:4336 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_75.json Books import:3529 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_76.json Books import:5986 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_77.json Books import:5692 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_78.json Books import:6142 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_79.json Books import:5602 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_80.json Books import:5113 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_81.json Books import:5756 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_82.json Books import:5874 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_83.json Books import:5504 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_84.json Books import:5792 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_85.json Books import:5886 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_86.json Books import:5788 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_87.json Books import:5765 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_88.json Books import:5819 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_89.json Books import:6775 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_90.json Books import:5718 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_91.json Books import:5942 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_92.json Books import:6154 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_93.json Books import:6488 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_94.json Books import:6063 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_95.json Books import:6556 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_96.json Books import:6144 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_97.json Books import:6163 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_98.json Books import:6940 ms
+INFO:root:Time elapsed to process related_items_harvest_Book_99.json Books import:6388 ms
+INFO:root:Started to process Book Chapters
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_0.json Book Chapters import:4632 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_1.json Book Chapters import:4754 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_2.json Book Chapters import:4459 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_3.json Book Chapters import:4425 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_4.json Book Chapters import:5572 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_5.json Book Chapters import:6184 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_6.json Book Chapters import:4442 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_7.json Book Chapters import:5140 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_8.json Book Chapters import:4189 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_9.json Book Chapters import:6068 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_10.json Book Chapters import:6428 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_11.json Book Chapters import:6565 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_12.json Book Chapters import:6591 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_13.json Book Chapters import:5759 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_14.json Book Chapters import:5168 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_15.json Book Chapters import:4688 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_16.json Book Chapters import:4988 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_17.json Book Chapters import:6257 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_18.json Book Chapters import:6352 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_19.json Book Chapters import:6099 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_20.json Book Chapters import:6576 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_21.json Book Chapters import:6769 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_22.json Book Chapters import:5990 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_23.json Book Chapters import:6332 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_24.json Book Chapters import:6827 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_25.json Book Chapters import:6316 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_26.json Book Chapters import:6984 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_27.json Book Chapters import:6401 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_28.json Book Chapters import:6737 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_29.json Book Chapters import:6349 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_30.json Book Chapters import:6731 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_31.json Book Chapters import:6005 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_32.json Book Chapters import:6780 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_33.json Book Chapters import:6474 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_34.json Book Chapters import:6126 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_35.json Book Chapters import:6513 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_36.json Book Chapters import:6431 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_37.json Book Chapters import:6330 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_38.json Book Chapters import:6954 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_39.json Book Chapters import:6588 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_40.json Book Chapters import:6335 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_41.json Book Chapters import:5817 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_42.json Book Chapters import:6311 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_43.json Book Chapters import:6907 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_44.json Book Chapters import:6373 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_45.json Book Chapters import:6642 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_46.json Book Chapters import:11959 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_47.json Book Chapters import:5867 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_48.json Book Chapters import:6655 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_49.json Book Chapters import:6688 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_50.json Book Chapters import:6439 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_51.json Book Chapters import:6430 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_52.json Book Chapters import:6409 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_53.json Book Chapters import:7029 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_54.json Book Chapters import:6496 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_55.json Book Chapters import:24954 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_56.json Book Chapters import:6429 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_57.json Book Chapters import:6407 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_58.json Book Chapters import:6935 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_59.json Book Chapters import:6124 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_60.json Book Chapters import:6477 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_61.json Book Chapters import:6713 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_62.json Book Chapters import:6024 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_63.json Book Chapters import:6582 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_64.json Book Chapters import:6399 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_65.json Book Chapters import:6701 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_66.json Book Chapters import:6320 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_67.json Book Chapters import:6490 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_68.json Book Chapters import:6754 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_69.json Book Chapters import:6007 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_70.json Book Chapters import:6413 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_71.json Book Chapters import:6806 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_72.json Book Chapters import:6525 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_73.json Book Chapters import:6039 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_74.json Book Chapters import:6610 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_75.json Book Chapters import:6683 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_76.json Book Chapters import:6757 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_77.json Book Chapters import:6381 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_78.json Book Chapters import:6898 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_79.json Book Chapters import:6418 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_80.json Book Chapters import:10010 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_81.json Book Chapters import:8552 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_82.json Book Chapters import:6140 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_83.json Book Chapters import:6204 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_84.json Book Chapters import:6173 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_85.json Book Chapters import:6501 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_86.json Book Chapters import:5919 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_87.json Book Chapters import:5709 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_88.json Book Chapters import:6405 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_89.json Book Chapters import:6506 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_90.json Book Chapters import:6323 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_91.json Book Chapters import:6182 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_92.json Book Chapters import:6675 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_93.json Book Chapters import:6403 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_94.json Book Chapters import:6062 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_95.json Book Chapters import:6225 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_96.json Book Chapters import:6672 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_97.json Book Chapters import:6295 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_98.json Book Chapters import:5986 ms
+INFO:root:Time elapsed to process related_items_harvest_BookChapter_99.json Book Chapters import:6495 ms
+INFO:root:Started to process Book Reviews
+INFO:root:Time elapsed to process related_items_harvest_BookReview_0.json Book Reviews import:2869 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_1.json Book Reviews import:2838 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_2.json Book Reviews import:2743 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_3.json Book Reviews import:2975 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_4.json Book Reviews import:2722 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_5.json Book Reviews import:2836 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_6.json Book Reviews import:2637 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_7.json Book Reviews import:2900 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_8.json Book Reviews import:2412 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_9.json Book Reviews import:2573 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_10.json Book Reviews import:2737 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_11.json Book Reviews import:2883 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_12.json Book Reviews import:2818 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_13.json Book Reviews import:3084 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_14.json Book Reviews import:2791 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_15.json Book Reviews import:2743 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_16.json Book Reviews import:2638 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_17.json Book Reviews import:2807 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_18.json Book Reviews import:2828 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_19.json Book Reviews import:3072 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_20.json Book Reviews import:2844 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_21.json Book Reviews import:2627 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_22.json Book Reviews import:2676 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_23.json Book Reviews import:2716 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_24.json Book Reviews import:2804 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_25.json Book Reviews import:3017 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_26.json Book Reviews import:2672 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_27.json Book Reviews import:2670 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_28.json Book Reviews import:2722 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_29.json Book Reviews import:2826 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_30.json Book Reviews import:2933 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_31.json Book Reviews import:2695 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_32.json Book Reviews import:3011 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_33.json Book Reviews import:3013 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_34.json Book Reviews import:2857 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_35.json Book Reviews import:2815 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_36.json Book Reviews import:2865 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_37.json Book Reviews import:2580 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_38.json Book Reviews import:3167 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_39.json Book Reviews import:2724 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_40.json Book Reviews import:2722 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_41.json Book Reviews import:2661 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_42.json Book Reviews import:2651 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_43.json Book Reviews import:2879 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_44.json Book Reviews import:2606 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_45.json Book Reviews import:2698 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_46.json Book Reviews import:2466 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_47.json Book Reviews import:2622 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_48.json Book Reviews import:2833 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_49.json Book Reviews import:3096 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_50.json Book Reviews import:2968 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_51.json Book Reviews import:2660 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_52.json Book Reviews import:2422 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_53.json Book Reviews import:2479 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_54.json Book Reviews import:2698 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_55.json Book Reviews import:2623 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_56.json Book Reviews import:2344 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_57.json Book Reviews import:2428 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_58.json Book Reviews import:2789 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_59.json Book Reviews import:2659 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_60.json Book Reviews import:2553 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_61.json Book Reviews import:2758 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_62.json Book Reviews import:2652 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_63.json Book Reviews import:2558 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_64.json Book Reviews import:2422 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_65.json Book Reviews import:2706 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_66.json Book Reviews import:2791 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_67.json Book Reviews import:2590 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_68.json Book Reviews import:2885 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_69.json Book Reviews import:2490 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_70.json Book Reviews import:2459 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_71.json Book Reviews import:2437 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_72.json Book Reviews import:2389 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_73.json Book Reviews import:2472 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_74.json Book Reviews import:2654 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_75.json Book Reviews import:2436 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_76.json Book Reviews import:2605 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_77.json Book Reviews import:2488 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_78.json Book Reviews import:2544 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_79.json Book Reviews import:2904 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_80.json Book Reviews import:2868 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_81.json Book Reviews import:2924 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_82.json Book Reviews import:2812 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_83.json Book Reviews import:2970 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_84.json Book Reviews import:2942 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_85.json Book Reviews import:2755 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_86.json Book Reviews import:3123 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_87.json Book Reviews import:2296 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_88.json Book Reviews import:612 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_89.json Book Reviews import:653 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_90.json Book Reviews import:744 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_91.json Book Reviews import:643 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_92.json Book Reviews import:636 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_93.json Book Reviews import:646 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_94.json Book Reviews import:647 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_95.json Book Reviews import:608 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_96.json Book Reviews import:662 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_97.json Book Reviews import:624 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_98.json Book Reviews import:601 ms
+INFO:root:Time elapsed to process related_items_harvest_BookReview_99.json Book Reviews import:648 ms
+INFO:root:Total Elapsed Time for Book Import:490360 ms
+INFO:root:Total Elapsed Time for Chapter Import:653635 ms
+INFO:root:Total Elapsed Time for Review Import:247663 ms
