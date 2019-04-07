@@ -1,0 +1,9 @@
+neo4j:
+    host: bolt://bo0001.qos.pc.dc04.hosted.exlibrisgroup.com:7687
+    user: neo4j
+    passwd: qos
+directories:
+    cql: ./cql
+    booksPath: /primo_indexing/relatedItems/done_after_pre_processing/books_phase1/
+    bookChapterPath: /pc_test_data/relatedItems/python/output/book_chapters/
+    bookReviewPath: /pc_test_data/relatedItems/python/output/book_reviews/
